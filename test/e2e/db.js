@@ -1,6 +1,6 @@
-// const connect = require('../../lib/connect');
-// const url = 'mongodb://localhost:27017/pirates-test';
-// const mongoose = require('mongoose');
+require('dotenv').config({path: './test/.env'});
+const connect = require('../../lib/connect');
+const mongoose = require('mongoose');
 
-// before(() => connect(url));    
-// after(() => mongoose.connection.close());
+before(() => connect(process.env.MONGODB_URI));    
+after(() => mongoose.connection.close());
