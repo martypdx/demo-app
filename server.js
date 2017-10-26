@@ -5,7 +5,7 @@ const app = require('./lib/app');
 // connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/changeme');
 
 // eslint-disable-next-line
-console.log(Object.values(process.env).join('\n'));
+console.log(process.env);
 
 const server = http.createServer(app);
 const port = process.env.PORT || 3000;
