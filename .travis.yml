@@ -2,7 +2,6 @@ language: node_js
 node_js:
   - "8"
 
-sudo: false
 services:
   - mongodb
 addons:
@@ -11,3 +10,5 @@ addons:
       - mongodb-3.6-precise
     packages:
       - mongodb-org-server 
+before_script:
+  - sleep 15
